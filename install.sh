@@ -906,7 +906,7 @@ install_v2ray() {
 	chmod +x "/usr/bin/v2ray/v2ctl"
 
 	if [[ $systemd ]]; then
-		cp -f "/tmp/v2ray/systemd/v2ray.service" "/lib/systemd/system/"
+		cp -f "/tmp/v2ray/systemd/system/v2ray*.service" "/lib/systemd/system/"
 		systemctl enable v2ray
 	else
 		apt-get install -y daemon
